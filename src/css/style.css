@@ -62,10 +62,13 @@ body {
     align-items: center;
     padding: 10px; }
     body .top img {
-      width: 80px;
+      width: 90px;
       padding-left: 10px; }
+      body .top img:hover {
+        cursor: pointer;
+        transform: scale(1.2); }
     body .top .score {
-      width: 60px;
+      width: 80px;
       background-color: white;
       border-radius: 4px;
       grid-area: 1 / 3;
@@ -95,6 +98,10 @@ body {
       text-align: center; }
       body main .game .icons img, body main .game .paper img, body main .game .scissors img, body main .game .rock img {
         padding-top: 20px; }
+      body main .game .icons:hover, body main .game .paper:hover, body main .game .scissors:hover, body main .game .rock:hover {
+        cursor: pointer; }
+        body main .game .icons:hover img, body main .game .paper:hover img, body main .game .scissors:hover img, body main .game .rock:hover img {
+          transform: scale(1.1); }
     body main .game .paper {
       grid-area: 1 / 1; }
       body main .game .paper:after {
@@ -123,6 +130,8 @@ body {
         top: -15px; }
     body main .game .rock {
       grid-area: 2 / 2; }
+      body main .game .rock img {
+        padding-top: 25px; }
       body main .game .rock:after {
         content: "";
         position: absolute;
@@ -135,23 +144,45 @@ body {
         left: 85px;
         top: 135px; }
   body main .rules {
-    width: 25%;
-    margin: auto;
-    border: 2px solid white;
-    border-radius: 10px;
-    padding: 10px;
-    color: white;
+    width: 100%;
     text-align: center;
-    margin-bottom: 5%;
-    transition-duration: 0.5s; }
-    body main .rules:hover {
-      transform: scale(1.1);
-      cursor: pointer;
-      background-color: white;
-      color: #3b4363; }
-    body main .rules h3 {
+    margin-bottom: 5%; }
+    body main .rules button {
+      background: none;
+      border: 2px solid white;
+      border-radius: 10px;
+      width: 35%;
+      margin: auto;
+      padding: 10px;
+      color: white;
       text-transform: uppercase;
-      letter-spacing: 2px; }
+      letter-spacing: 2px;
+      text-align: center;
+      transition-duration: 0.5s; }
+      body main .rules button:hover {
+        cursor: pointer;
+        background-color: white;
+        color: #3b4363;
+        transform: scale(1.1); }
+  body main .modal {
+    text-align: center;
+    background-color: white;
+    padding-top: 25%; }
+    body main .modal h2 {
+      font-size: 2em;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 25%; }
+    body main .modal img {
+      width: 80%;
+      margin: auto;
+      margin-bottom: 45%; }
+    body main .modal .fa-times {
+      font-size: 2em;
+      color: lightgrey;
+      width: 30%; }
+      body main .modal .fa-times:hover {
+        cursor: pointer; }
 
 @media screen and (min-width: 1366px) {
   body {
