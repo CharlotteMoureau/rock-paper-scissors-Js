@@ -47,6 +47,29 @@ body {
     }
 
     main {
+
+        .icons {
+            background-color: white;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            text-align: center;
+
+            img {
+                padding-top: 20px;
+            }
+
+            &:after {
+                content: "";
+                position: absolute;
+                display: inline-block;
+                border-radius: 50%;
+                height: 130px;
+                width: 130px;
+                z-index: -1;
+            }
+        }
+
         .game {
             background-image: url('../../assets/images/bg-triangle.svg');
             background-size: 60%;
@@ -60,17 +83,9 @@ body {
             row-gap: 50px;
             position: relative;
             z-index: 1;
+            display: none;
 
-            .icons {
-                background-color: white;
-                width: 100px;
-                height: 100px;
-                border-radius: 50%;
-                text-align: center;
-
-                img {
-                    padding-top: 20px;
-                }
+            .icons-hover {
 
                 &:hover {
                     cursor: pointer;
@@ -83,17 +98,11 @@ body {
 
             .paper {
                 grid-area: 1 / 1;
-                @extend .icons;
+                @extend .icons, .icons-hover;
 
                 &:after {
-                    content: "";
-                    position: absolute;
-                    display: inline-block;
-                    border-radius: 50%;
-                    height: 130px;
-                    width: 130px;
-                    background: $paper;
-                    z-index: -1;
+                    
+                    background: $paper;      
                     left: -15px;
                     top: -15px;
                 }
@@ -101,17 +110,10 @@ body {
 
             .scissors {
                 grid-area: 1 / 3;
-                @extend .icons;
+                @extend .icons, .icons-hover;
 
                 &:after {
-                    content: "";
-                    position: absolute;
-                    display: inline-block;
-                    border-radius: 50%;
-                    height: 130px;
-                    width: 130px;
                     background: $scissors;
-                    z-index: -1;
                     left: 185px;
                     top: -15px;
                 }
@@ -119,23 +121,124 @@ body {
 
             .rock {
                 grid-area: 2 / 2;
-                @extend .icons;
+                @extend .icons, .icons-hover;
 
                 img {
                     padding-top: 25px;
                 }
 
                 &:after {
-                    content: "";
-                    position: absolute;
-                    display: inline-block;
-                    border-radius: 50%;
-                    height: 130px;
-                    width: 130px;
                     background: $rock;
-                    z-index: -1;
                     left: 85px;
                     top: 135px;
+                }
+            }
+        }
+
+        .result {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            justify-items: center;
+            text-align: center;
+            margin-bottom: 60%;
+
+            .h3 {
+                margin-top: 25%;
+                text-transform: uppercase;
+                font-size: 0.8em;
+                letter-spacing: 2px;
+                font-weight: 700;
+            }
+
+            .result-user {
+
+                &:after {
+                    left: -15px;
+                    top: -15px;
+                }
+            }
+
+            .user {
+                position: relative;
+                color: white;
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+
+                .paper {
+                    display: none;
+                    @extend .icons, .result-user;
+
+                    &:after {
+                        background: $paper;
+                    }
+                }
+
+                .scissors {
+                    display: none;
+                    @extend .icons, .result-user;
+
+                    &:after {
+                        background: $scissors;
+                    }
+                }
+
+                .rock {
+                    // display: none;
+                    @extend .icons, .result-user;
+                    padding-top: 5px;
+
+                    &:after {
+                        background: $rock;
+                    }
+                }
+
+                h3 {
+                    @extend .h3;
+                    
+                }
+            }
+
+            .cpu {
+                position: relative;
+                color: white;
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+
+                .hollow {
+                    display: none;
+                    @extend .icons;
+                    background: hsl(237, 49%, 15%);
+                }
+
+                .paper {
+                    // display: none;
+                    @extend .icons, .result-user;
+
+                    &:after {
+                        background: $paper;
+                    }
+                }
+
+                .scissors {
+                    display: none;
+                    @extend .icons, .result-user;
+
+                    &:after {
+                        background: $scissors;
+                    }
+                }
+
+                .rock {
+                    display: none;
+                    @extend .icons, .result-user;
+
+                    &:after {
+                        background: $rock;
+                    }
+                }
+
+                h3 {
+                    @extend .h3;
                 }
             }
         }
@@ -168,30 +271,35 @@ body {
         }
 
         .modal {
-            text-align: center;
             background-color: white;
             padding-top: 25%;
 
-            h2 {
-                font-size: 2em;
-                font-weight: 700;
-                text-transform: uppercase;
-                margin-bottom: 25%;
-            }
+            .test {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                align-items: center;
 
-            img {
-                width: 80%;
-                margin: auto;
-                margin-bottom: 45%;
-            }
-
-            .fa-times {
-                font-size: 2em;
-                color: lightgrey;
-                width: 30%;
-
-                &:hover {
-                    cursor: pointer;
+                h2 {
+                    font-size: 2em;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    margin-bottom: 25%;
+                    text-align: center;
+                }
+    
+                .triangle-rule {
+                    width: 80%;
+                    margin: auto;
+                    margin-bottom: 50%;
+                }
+    
+                .close {
+                    width: 7%;
+                    margin: auto;
+    
+                    &:hover {
+                        cursor: pointer;
+                    }
                 }
             }
         }

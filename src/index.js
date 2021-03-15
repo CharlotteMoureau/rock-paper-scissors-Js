@@ -8,7 +8,6 @@ const computerAnswers = [1, 2, 3]
 
 const score = document.getElementById('score')
 let scoreCount = 0
-score.innerText = scoreCount
 
 
 function getUserAnswer() {
