@@ -77,15 +77,15 @@ body {
       body .top .score .points {
         font-size: 2.5em;
         font-weight: 700; }
-  body main .icons, body main .game .paper, body main .game .scissors, body main .game .rock, body main .result .user .paper, body main .result .user .scissors, body main .result .user .rock, body main .result .cpu .hollow, body main .result .cpu .paper, body main .result .cpu .scissors, body main .result .cpu .rock {
+  body main .icons, body main .game .paper, body main .game .scissors, body main .game .rock, body main .vs .user .paper, body main .vs .user .scissors, body main .vs .user .rock, body main .vs .cpu .hollow, body main .vs .cpu .paper, body main .vs .cpu .scissors, body main .vs .cpu .rock {
     background-color: white;
     width: 100px;
     height: 100px;
     border-radius: 50%;
     text-align: center; }
-    body main .icons img, body main .game .paper img, body main .game .scissors img, body main .game .rock img, body main .result .user .paper img, body main .result .user .scissors img, body main .result .user .rock img, body main .result .cpu .hollow img, body main .result .cpu .paper img, body main .result .cpu .scissors img, body main .result .cpu .rock img {
+    body main .icons img, body main .game .paper img, body main .game .scissors img, body main .game .rock img, body main .vs .user .paper img, body main .vs .user .scissors img, body main .vs .user .rock img, body main .vs .cpu .hollow img, body main .vs .cpu .paper img, body main .vs .cpu .scissors img, body main .vs .cpu .rock img {
       padding-top: 20px; }
-    body main .icons:after, body main .game .paper:after, body main .game .scissors:after, body main .game .rock:after, body main .result .user .paper:after, body main .result .user .scissors:after, body main .result .user .rock:after, body main .result .cpu .hollow:after, body main .result .cpu .paper:after, body main .result .cpu .scissors:after, body main .result .cpu .rock:after {
+    body main .icons:after, body main .game .paper:after, body main .game .scissors:after, body main .game .rock:after, body main .vs .user .paper:after, body main .vs .user .scissors:after, body main .vs .user .rock:after, body main .vs .cpu .hollow:after, body main .vs .cpu .paper:after, body main .vs .cpu .scissors:after, body main .vs .cpu .rock:after {
       content: "";
       position: absolute;
       display: inline-block;
@@ -105,8 +105,7 @@ body {
     grid-template-columns: repeat(3, 1fr);
     row-gap: 50px;
     position: relative;
-    z-index: 1;
-    display: none; }
+    z-index: 1; }
     body main .game .icons-hover:hover, body main .game .paper:hover, body main .game .scissors:hover, body main .game .rock:hover {
       cursor: pointer; }
       body main .game .icons-hover:hover img, body main .game .paper:hover img, body main .game .scissors:hover img, body main .game .rock:hover img {
@@ -131,56 +130,83 @@ body {
         background: linear-gradient(#dc2e4e, #dd405d);
         left: 85px;
         top: 135px; }
-  body main .result {
-    display: grid;
+  body main .vs {
+    display: none;
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
     text-align: center;
-    margin-bottom: 60%; }
-    body main .result .h3, body main .result .user h3, body main .result .cpu h3 {
-      margin-top: 25%;
+    margin-bottom: 22%; }
+    body main .vs .h3, body main .vs .user h3, body main .vs .cpu h3 {
+      padding-top: 30px;
       text-transform: uppercase;
       font-size: 0.8em;
       letter-spacing: 2px;
       font-weight: 700; }
-    body main .result .result-user:after, body main .result .user .paper:after, body main .result .user .scissors:after, body main .result .user .rock:after, body main .result .cpu .paper:after, body main .result .cpu .scissors:after, body main .result .cpu .rock:after {
-      left: -15px;
+    body main .vs .result-user:after, body main .vs .user .paper:after, body main .vs .user .scissors:after, body main .vs .user .rock:after, body main .vs .cpu .paper:after, body main .vs .cpu .scissors:after, body main .vs .cpu .rock:after {
+      left: 29px;
       top: -15px; }
-    body main .result .user {
+    body main .vs .box, body main .vs .user, body main .vs .cpu {
+      width: 100%;
       position: relative;
       color: white;
       display: grid;
-      grid-template-columns: repeat(1, 1fr); }
-      body main .result .user .paper {
-        display: none; }
-        body main .result .user .paper:after {
-          background: linear-gradient(#4865f4, #5671f5); }
-      body main .result .user .scissors {
-        display: none; }
-        body main .result .user .scissors:after {
-          background: linear-gradient(#ec9e0e, #eca922); }
-      body main .result .user .rock {
-        padding-top: 5px; }
-        body main .result .user .rock:after {
-          background: linear-gradient(#dc2e4e, #dd405d); }
-    body main .result .cpu {
-      position: relative;
-      color: white;
-      display: grid;
-      grid-template-columns: repeat(1, 1fr); }
-      body main .result .cpu .hollow {
-        display: none;
-        background: #141539; }
-      body main .result .cpu .paper:after {
+      grid-template-columns: repeat(1, 1fr);
+      justify-items: center;
+      text-align: center; }
+    body main .vs .user .paper {
+      display: none; }
+      body main .vs .user .paper:after {
         background: linear-gradient(#4865f4, #5671f5); }
-      body main .result .cpu .scissors {
-        display: none; }
-        body main .result .cpu .scissors:after {
-          background: linear-gradient(#ec9e0e, #eca922); }
-      body main .result .cpu .rock {
-        display: none; }
-        body main .result .cpu .rock:after {
-          background: linear-gradient(#dc2e4e, #dd405d); }
+    body main .vs .user .scissors {
+      display: none; }
+      body main .vs .user .scissors:after {
+        background: linear-gradient(#ec9e0e, #eca922); }
+    body main .vs .user .rock {
+      display: none;
+      padding-top: 5px; }
+      body main .vs .user .rock:after {
+        background: linear-gradient(#dc2e4e, #dd405d); }
+    body main .vs .cpu .hollow {
+      display: block;
+      background: #141539; }
+    body main .vs .cpu .paper {
+      display: none; }
+      body main .vs .cpu .paper:after {
+        background: linear-gradient(#4865f4, #5671f5); }
+    body main .vs .cpu .scissors {
+      display: none; }
+      body main .vs .cpu .scissors:after {
+        background: linear-gradient(#ec9e0e, #eca922); }
+    body main .vs .cpu .rock {
+      display: none;
+      padding-top: 5px; }
+      body main .vs .cpu .rock:after {
+        background: linear-gradient(#dc2e4e, #dd405d); }
+  body main .result {
+    display: none;
+    width: 55%;
+    margin: auto;
+    margin-bottom: 15%; }
+    body main .result h3 {
+      color: white;
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 3.2em;
+      font-weight: 700;
+      margin-bottom: 10%; }
+    body main .result button {
+      border: 2px solid white;
+      border-radius: 10px;
+      width: 100%;
+      margin: auto;
+      padding: 12px;
+      color: #3b4363;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-align: center;
+      transition-duration: 0.5s; }
+      body main .result button:hover {
+        color: white; }
   body main .rules {
     width: 100%;
     text-align: center;

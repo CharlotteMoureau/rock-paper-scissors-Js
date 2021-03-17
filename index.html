@@ -53,39 +53,43 @@
   </header>
 
   <main>
-    <div class="game">
+    <div class="game" id="game">
       <div class="paper button" id="paper"><img src="./assets/images/icon-paper.svg" alt="paper icon"></div>
       <div class="scissors  button" id="scissors"><img src="./assets/images/icon-scissors.svg" alt="scissors icon">
       </div>
       <div class="rock  button" id="rock"><img src="./assets/images/icon-rock.svg" alt="rock icon"></div>
     </div>
 
-    <div class="result">
+    <div class="vs" id="vs">
       <div class="user">
-        <div class="paper">
+        <div class="paper" id="user-paper">
           <img src="./assets/images/icon-paper.svg" alt="paper icon user">
         </div>
-        <div class="scissors">
+        <div class="scissors" id="user-scissors">
           <img src="./assets/images/icon-scissors.svg" alt="scissors icon user">
         </div>
-        <div class="rock">
+        <div class="rock" id="user-rock">
           <img src="./assets/images/icon-rock.svg" alt="rock icon user">
         </div>
         <h3>You picked</h3>
       </div>
       <div class="cpu">
-        <div class="hollow"></div>
-        <div class="paper">
+        <div class="hollow" id="hollow"></div>
+        <div class="paper" id="cpu-paper">
           <img src="./assets/images/icon-paper.svg" alt="paper icon cpu">
         </div>
-        <div class="scissors">
+        <div class="scissors" id="cpu-scissors">
           <img src="./assets/images/icon-scissors.svg" alt="scissors icon cpu">
         </div>
-        <div class="rock">
+        <div class="rock" id="cpu-rock">
           <img src="./assets/images/icon-rock.svg" alt="rock icon cpu">
         </div>
         <h3>The house picked</h3>
       </div>
+    </div>
+    <div class="result">
+      <h3 id="win-or-lose">You win</h3>
+      <button>Play again</button>
     </div>
 
     <!-- rule modal -->
