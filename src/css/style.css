@@ -79,57 +79,46 @@ body {
         font-weight: 700; }
   body main .icons, body main .game .paper, body main .game .scissors, body main .game .rock, body main .vs .user .paper, body main .vs .user .scissors, body main .vs .user .rock, body main .vs .cpu .hollow, body main .vs .cpu .paper, body main .vs .cpu .scissors, body main .vs .cpu .rock {
     background-color: white;
-    width: 100px;
-    height: 100px;
+    width: 125px;
+    height: 125px;
     border-radius: 50%;
-    text-align: center; }
+    margin: 10px;
+    text-align: center;
+    border-width: 15px;
+    border-style: solid; }
+    body main .icons input, body main .game .paper input, body main .game .scissors input, body main .game .rock input, body main .vs .user .paper input, body main .vs .user .scissors input, body main .vs .user .rock input, body main .vs .cpu .hollow input, body main .vs .cpu .paper input, body main .vs .cpu .scissors input, body main .vs .cpu .rock input {
+      padding: 40px;
+      margin-top: -20px;
+      margin-left: -15px; }
     body main .icons img, body main .game .paper img, body main .game .scissors img, body main .game .rock img, body main .vs .user .paper img, body main .vs .user .scissors img, body main .vs .user .rock img, body main .vs .cpu .hollow img, body main .vs .cpu .paper img, body main .vs .cpu .scissors img, body main .vs .cpu .rock img {
       padding-top: 20px; }
-    body main .icons:after, body main .game .paper:after, body main .game .scissors:after, body main .game .rock:after, body main .vs .user .paper:after, body main .vs .user .scissors:after, body main .vs .user .rock:after, body main .vs .cpu .hollow:after, body main .vs .cpu .paper:after, body main .vs .cpu .scissors:after, body main .vs .cpu .rock:after {
-      content: "";
-      position: absolute;
-      display: inline-block;
-      border-radius: 50%;
-      height: 130px;
-      width: 130px;
-      z-index: -1; }
   body main .game {
     background-image: url("../../assets/images/bg-triangle.svg");
     background-size: 60%;
     background-repeat: no-repeat;
     background-position: center;
-    width: 300px;
+    width: 340px;
     margin: auto;
     margin-bottom: 35%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    row-gap: 50px;
-    position: relative;
-    z-index: 1; }
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; }
     body main .game .icons-hover:hover, body main .game .paper:hover, body main .game .scissors:hover, body main .game .rock:hover {
       cursor: pointer; }
-      body main .game .icons-hover:hover img, body main .game .paper:hover img, body main .game .scissors:hover img, body main .game .rock:hover img {
+      body main .game .icons-hover:hover input, body main .game .paper:hover input, body main .game .scissors:hover input, body main .game .rock:hover input {
         transform: scale(1.1); }
     body main .game .paper {
-      grid-area: 1 / 1; }
-      body main .game .paper:after {
-        background: linear-gradient(#4865f4, #5671f5);
-        left: -15px;
-        top: -15px; }
+      grid-area: 1 / 1;
+      border-color: #4865f4; }
     body main .game .scissors {
-      grid-area: 1 / 3; }
-      body main .game .scissors:after {
-        background: linear-gradient(#ec9e0e, #eca922);
-        left: 185px;
-        top: -15px; }
+      grid-area: 1 / 3;
+      border-color: #ec9e0e; }
     body main .game .rock {
-      grid-area: 2 / 2; }
-      body main .game .rock img {
-        padding-top: 25px; }
-      body main .game .rock:after {
-        background: linear-gradient(#dc2e4e, #dd405d);
-        left: 85px;
-        top: 135px; }
+      grid-area: 2 / 2;
+      border-color: #dc2e4e;
+      justify-self: center; }
+      body main .game .rock input {
+        padding-top: 45px; }
   body main .vs {
     display: none;
     grid-template-columns: repeat(2, 1fr);
@@ -142,9 +131,6 @@ body {
       font-size: 0.8em;
       letter-spacing: 2px;
       font-weight: 700; }
-    body main .vs .result-user:after, body main .vs .user .paper:after, body main .vs .user .scissors:after, body main .vs .user .rock:after, body main .vs .cpu .paper:after, body main .vs .cpu .scissors:after, body main .vs .cpu .rock:after {
-      left: 29px;
-      top: -15px; }
     body main .vs .box, body main .vs .user, body main .vs .cpu {
       width: 100%;
       position: relative;
@@ -154,34 +140,42 @@ body {
       justify-items: center;
       text-align: center; }
     body main .vs .user .paper {
-      display: none; }
-      body main .vs .user .paper:after {
-        background: linear-gradient(#4865f4, #5671f5); }
+      display: none;
+      border-color: #4865f4; }
     body main .vs .user .scissors {
-      display: none; }
-      body main .vs .user .scissors:after {
-        background: linear-gradient(#ec9e0e, #eca922); }
+      display: none;
+      border-color: #ec9e0e; }
     body main .vs .user .rock {
       display: none;
+      border-color: #dc2e4e;
       padding-top: 5px; }
-      body main .vs .user .rock:after {
-        background: linear-gradient(#dc2e4e, #dd405d); }
+
+@keyframes pop {
+  0% {
+    transform: scale(0.5); }
+  100% {
+    transform: scale(1); } }
+    body main .vs .add-pop, body main .vs .cpu .paper, body main .vs .cpu .scissors, body main .vs .cpu .rock {
+      animation-name: pop;
+      animation-duration: 1s; }
     body main .vs .cpu .hollow {
       display: block;
+      width: 100px;
+      height: 100px;
+      border: none;
+      margin-top: 20px;
+      margin-bottom: 25px;
       background: #141539; }
     body main .vs .cpu .paper {
-      display: none; }
-      body main .vs .cpu .paper:after {
-        background: linear-gradient(#4865f4, #5671f5); }
+      display: none;
+      border-color: #4865f4; }
     body main .vs .cpu .scissors {
-      display: none; }
-      body main .vs .cpu .scissors:after {
-        background: linear-gradient(#ec9e0e, #eca922); }
+      display: none;
+      border-color: #ec9e0e; }
     body main .vs .cpu .rock {
       display: none;
+      border-color: #dc2e4e;
       padding-top: 5px; }
-      body main .vs .cpu .rock:after {
-        background: linear-gradient(#dc2e4e, #dd405d); }
   body main .result {
     display: none;
     width: 55%;

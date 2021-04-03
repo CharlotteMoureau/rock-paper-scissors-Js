@@ -50,23 +50,22 @@ body {
 
         .icons {
             background-color: white;
-            width: 100px;
-            height: 100px;
+            width: 125px;
+            height: 125px;
             border-radius: 50%;
+            margin: 10px;
             text-align: center;
+            border-width: 15px;
+            border-style: solid;
+
+            input {
+                padding: 40px;
+                margin-top: -20px;
+                margin-left: -15px;
+            }
 
             img {
                 padding-top: 20px;
-            }
-
-            &:after {
-                content: "";
-                position: absolute;
-                display: inline-block;
-                border-radius: 50%;
-                height: 130px;
-                width: 130px;
-                z-index: -1;
             }
         }
 
@@ -75,21 +74,19 @@ body {
             background-size: 60%;
             background-repeat: no-repeat;
             background-position: center;
-            width: 300px;
+            width: 340px;
             margin: auto;
             margin-bottom: 35%;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            row-gap: 50px;
-            position: relative;
-            z-index: 1;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
 
             .icons-hover {
 
                 &:hover {
                     cursor: pointer;
 
-                    img {
+                    input {
                         transform: scale(1.1);
                     }
                 }
@@ -98,38 +95,23 @@ body {
             .paper {
                 grid-area: 1 / 1;
                 @extend .icons, .icons-hover;
-
-                &:after {
-                    
-                    background: $paper;      
-                    left: -15px;
-                    top: -15px;
-                }
+                border-color: $paper;
             }
 
             .scissors {
                 grid-area: 1 / 3;
                 @extend .icons, .icons-hover;
-
-                &:after {
-                    background: $scissors;
-                    left: 185px;
-                    top: -15px;
-                }
+                border-color: $scissors;
             }
 
             .rock {
                 grid-area: 2 / 2;
                 @extend .icons, .icons-hover;
+                border-color: $rock;
+                justify-self: center;
 
-                img {
-                    padding-top: 25px;
-                }
-
-                &:after {
-                    background: $rock;
-                    left: 85px;
-                    top: 135px;
+                input {
+                    padding-top: 45px;
                 }
             }
         }
@@ -149,14 +131,6 @@ body {
                 font-weight: 700;
             }
 
-            .result-user {
-
-                &:after {
-                    left: 29px;
-                    top: -15px;
-                }
-            }
-
             .box {
                 width: 100%;
                 position: relative;
@@ -172,30 +146,21 @@ body {
 
                 .paper {
                     display: none;
-                    @extend .icons, .result-user;
-
-                    &:after {
-                        background: $paper;
-                    }
+                    @extend .icons;
+                    border-color: $paper;
                 }
 
                 .scissors {
                     display: none;
-                    @extend .icons, .result-user;
-
-                    &:after {
-                        background: $scissors;
-                    }
+                    @extend .icons;
+                    border-color: $scissors;
                 }
 
                 .rock {
                     display: none;
-                    @extend .icons, .result-user;
+                    @extend .icons;
+                    border-color: $rock;
                     padding-top: 5px;
-
-                    &:after {
-                        background: $rock;
-                    }
                 }
 
                 h3 {
@@ -204,41 +169,47 @@ body {
                 }
             }
 
+            @keyframes pop {
+                0% { transform: scale(0.5)}
+                100% { transform: scale(1.0)}
+            }
+
+            .add-pop {
+                animation-name: pop;
+                animation-duration: 1s;
+            }
+
             .cpu {
                 @extend .box;
 
                 .hollow {
                     display: block;
                     @extend .icons;
+                    width: 100px;
+                    height: 100px;
+                    border: none;
+                    margin-top: 20px;
+                    margin-bottom: 25px;
                     background: hsl(237, 49%, 15%);
                 }
 
                 .paper {
                     display: none;
-                    @extend .icons, .result-user;
-
-                    &:after {
-                        background: $paper;
-                    }
+                    @extend .icons, .add-pop;
+                    border-color: $paper;
                 }
 
                 .scissors {
                     display: none;
-                    @extend .icons, .result-user;
-
-                    &:after {
-                        background: $scissors;
-                    }
+                    @extend .icons, .add-pop;
+                    border-color: $scissors;
                 }
 
                 .rock {
                     display: none;
-                    @extend .icons, .result-user;
+                    @extend .icons, .add-pop;
+                    border-color: $rock;
                     padding-top: 5px;
-
-                    &:after {
-                        background: $rock;
-                    }
                 }
 
                 h3 {
