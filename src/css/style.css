@@ -298,8 +298,10 @@ body {
     width: 15%;
     margin-bottom: 0; }
   body main .rules {
-    width: 98%;
+    width: 10%;
     text-align: right;
+    margin-left: auto;
+    margin-right: 2%;
     margin-bottom: 1%; }
     body main .rules button {
       width: 140px; }
