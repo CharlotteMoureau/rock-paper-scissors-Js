@@ -1,7 +1,7 @@
 @import 'variables';
 
 body {
-    height: 100vh;
+    height: 90vh;
     font-family: 'Barlow Semi Condensed', sans-serif;
     color: $dark-text;
     background: $background;
@@ -37,6 +37,7 @@ body {
             padding: 10px;
 
             h3 {
+                text-transform: uppercase;
             }
 
             .points {
@@ -282,7 +283,7 @@ body {
             background-color: white;
             padding-top: 25%;
 
-            .test {
+            .inside-modal {
                 display: grid;
                 grid-template-columns: repeat(1, 1fr);
                 align-items: center;
@@ -304,10 +305,6 @@ body {
                 .close {
                     width: 7%;
                     margin: auto;
-    
-                    &:hover {
-                        cursor: pointer;
-                    }
                 }
             }
         }

@@ -1,5 +1,147 @@
 @media screen and (min-width: 1366px) {
     body {
-        background: pink;
+        .top {
+            margin-top: 3.5%;
+            width: 50%;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 4%;
+
+            img {
+                width: 160px;
+            }
+
+            .score {
+                width: 150px;
+                height: 110px;
+                border-radius: 8px;
+                padding: 15px;
+
+                h3 {
+                    font-size: 1.1em;
+                }
+
+                .points {
+                    font-size: 4em;
+                }
+            }
+        }
+
+        main {
+            .icons {
+                width: 200px;
+                height: 200px;
+                border-width: 25px;
+
+                input {
+                    height: 190px;
+                    padding: 55px;
+                }
+            }
+
+            .game {
+                width: 560px;
+                background-size: 50%;
+                margin-bottom: 1%;
+
+                .rock {
+                    input {
+                        padding-top: 60px;
+                        width: 180px;
+                        height: 180px;
+                    }
+                }
+            }
+
+            .vs {
+                width: 50%;
+                margin: auto;
+
+                .subtitle {
+                    grid-area: 1 / 1;
+                    font-size: 1.5em;
+                    margin-bottom: 50px;
+                }
+
+                .deskicons {
+                    width: 270px;
+                    height: 270px;
+
+                    img {
+                        margin-top: 30px;
+                        height: 130px;
+                    }
+                }
+
+                .user {
+                    h3 {
+                        @extend .subtitle;
+                    }
+
+                    .paper {
+                        @extend .deskicons;
+                    }
+
+                    .scissors {
+                        @extend .deskicons;
+                    }
+
+                    .rock {
+                        @extend .deskicons;
+                    }
+                }
+
+                .cpu {
+                    h3 {
+                        @extend .subtitle;
+                    }
+
+                    .hollow {
+                        width: 210px;
+                        height: 210px;
+                    }
+
+                    .paper {
+                        @extend .deskicons;
+                    }
+
+                    .scissors {
+                        @extend .deskicons;
+                    }
+
+                    .rock {
+                        @extend .deskicons;
+                    }
+                }
+
+                .box {
+
+                }
+            }
+
+            .result {
+                width: 15%;
+                margin-bottom: 0;
+            }
+
+            .rules {
+                width: 98%;
+                text-align: right;
+                margin-bottom: 1%;
+                button {
+                    width: 140px;
+                }
+            }
+
+            .modal {
+                padding-top: 0;
+
+                .inside-modal {
+                    .triangle-rule {
+                        margin-bottom: 20%;
+                    }
+                }
+            }
+        }
     }
 }
