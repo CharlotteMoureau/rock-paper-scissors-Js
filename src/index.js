@@ -1,3 +1,11 @@
+function hover(image) {
+    image.setAttribute('src', './assets/images/logo-bonus.svg')
+}
+
+function unhover(image) {
+    image.setAttribute('src', './assets/images/logo.svg')
+}
+
 let cpuAnswer = []
 
 // array with the choices of the cpu
