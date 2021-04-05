@@ -45,12 +45,12 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-body {
+.normal {
   height: 90vh;
   font-family: 'Barlow Semi Condensed', sans-serif;
   color: #3b4363;
   background: radial-gradient(#1f3756, #141539); }
-  body .top {
+  .normal .top {
     width: 75%;
     margin: auto;
     margin-top: 8%;
@@ -61,24 +61,24 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px; }
-    body .top img {
+    .normal .top img {
       width: 90px;
       padding-left: 10px; }
-      body .top img:hover {
+      .normal .top img:hover {
         cursor: pointer; }
-    body .top .score {
+    .normal .top .score {
       width: 80px;
       background-color: white;
       border-radius: 4px;
       grid-area: 1 / 3;
       text-align: center;
       padding: 10px; }
-      body .top .score h3 {
+      .normal .top .score h3 {
         text-transform: uppercase; }
-      body .top .score .points {
+      .normal .top .score .points {
         font-size: 2.5em;
         font-weight: 700; }
-  body main .icons, body main .game .paper, body main .game .scissors, body main .game .rock, body main .vs .user .paper, body main .vs .user .scissors, body main .vs .user .rock, body main .vs .cpu .hollow, body main .vs .cpu .paper, body main .vs .cpu .scissors, body main .vs .cpu .rock, body .bonus main .game-bonus .paper-bonus, .bonus body main .game-bonus .paper-bonus, body .bonus main .game-bonus .scissors-bonus, .bonus body main .game-bonus .scissors-bonus, body .bonus main .game-bonus .rock-bonus, .bonus body main .game-bonus .rock-bonus, body .bonus main .game-bonus .lizard-bonus, .bonus body main .game-bonus .lizard-bonus, body .bonus main .game-bonus .spock-bonus, .bonus body main .game-bonus .spock-bonus {
+  .normal main .icons, .normal main .game .paper, .normal main .game .scissors, .normal main .game .rock, .normal main .vs .user .paper, .normal main .vs .user .scissors, .normal main .vs .user .rock, .normal main .vs .cpu .hollow, .normal main .vs .cpu .paper, .normal main .vs .cpu .scissors, .normal main .vs .cpu .rock, .normal .bonus main .game .lizard, .bonus .normal main .game .lizard, .normal .bonus main .game .spock, .bonus .normal main .game .spock {
     background-color: white;
     width: 125px;
     height: 125px;
@@ -87,13 +87,13 @@ body {
     text-align: center;
     border-width: 15px;
     border-style: solid; }
-    body main .icons input, body main .game .paper input, body main .game .scissors input, body main .game .rock input, body main .vs .user .paper input, body main .vs .user .scissors input, body main .vs .user .rock input, body main .vs .cpu .hollow input, body main .vs .cpu .paper input, body main .vs .cpu .scissors input, body main .vs .cpu .rock input, body .bonus main .game-bonus .paper-bonus input, .bonus body main .game-bonus .paper-bonus input, body .bonus main .game-bonus .scissors-bonus input, .bonus body main .game-bonus .scissors-bonus input, body .bonus main .game-bonus .rock-bonus input, .bonus body main .game-bonus .rock-bonus input, body .bonus main .game-bonus .lizard-bonus input, .bonus body main .game-bonus .lizard-bonus input, body .bonus main .game-bonus .spock-bonus input, .bonus body main .game-bonus .spock-bonus input {
+    .normal main .icons input, .normal main .game .paper input, .normal main .game .scissors input, .normal main .game .rock input, .normal main .vs .user .paper input, .normal main .vs .user .scissors input, .normal main .vs .user .rock input, .normal main .vs .cpu .hollow input, .normal main .vs .cpu .paper input, .normal main .vs .cpu .scissors input, .normal main .vs .cpu .rock input, .normal .bonus main .game .lizard input, .bonus .normal main .game .lizard input, .normal .bonus main .game .spock input, .bonus .normal main .game .spock input {
       padding: 40px;
       margin-top: -20px;
       margin-left: -15px; }
-    body main .icons img, body main .game .paper img, body main .game .scissors img, body main .game .rock img, body main .vs .user .paper img, body main .vs .user .scissors img, body main .vs .user .rock img, body main .vs .cpu .hollow img, body main .vs .cpu .paper img, body main .vs .cpu .scissors img, body main .vs .cpu .rock img, body .bonus main .game-bonus .paper-bonus img, .bonus body main .game-bonus .paper-bonus img, body .bonus main .game-bonus .scissors-bonus img, .bonus body main .game-bonus .scissors-bonus img, body .bonus main .game-bonus .rock-bonus img, .bonus body main .game-bonus .rock-bonus img, body .bonus main .game-bonus .lizard-bonus img, .bonus body main .game-bonus .lizard-bonus img, body .bonus main .game-bonus .spock-bonus img, .bonus body main .game-bonus .spock-bonus img {
+    .normal main .icons img, .normal main .game .paper img, .normal main .game .scissors img, .normal main .game .rock img, .normal main .vs .user .paper img, .normal main .vs .user .scissors img, .normal main .vs .user .rock img, .normal main .vs .cpu .hollow img, .normal main .vs .cpu .paper img, .normal main .vs .cpu .scissors img, .normal main .vs .cpu .rock img, .normal .bonus main .game .lizard img, .bonus .normal main .game .lizard img, .normal .bonus main .game .spock img, .bonus .normal main .game .spock img {
       padding-top: 20px; }
-  body main .game {
+  .normal main .game {
     background-image: url("../../assets/images/bg-triangle.svg");
     background-size: 60%;
     background-repeat: no-repeat;
@@ -104,35 +104,35 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around; }
-    body main .game .icons-hover:hover, body main .game .paper:hover, body main .game .scissors:hover, body main .game .rock:hover, body .bonus main .game .game-bonus .paper-bonus:hover, .bonus body main .game .game-bonus .paper-bonus:hover, body .bonus main .game-bonus .game .paper-bonus:hover, .bonus body main .game-bonus .game .paper-bonus:hover, body .bonus main .game .game-bonus .scissors-bonus:hover, .bonus body main .game .game-bonus .scissors-bonus:hover, body .bonus main .game-bonus .game .scissors-bonus:hover, .bonus body main .game-bonus .game .scissors-bonus:hover, body .bonus main .game .game-bonus .rock-bonus:hover, .bonus body main .game .game-bonus .rock-bonus:hover, body .bonus main .game-bonus .game .rock-bonus:hover, .bonus body main .game-bonus .game .rock-bonus:hover, body .bonus main .game .game-bonus .lizard-bonus:hover, .bonus body main .game .game-bonus .lizard-bonus:hover, body .bonus main .game-bonus .game .lizard-bonus:hover, .bonus body main .game-bonus .game .lizard-bonus:hover, body .bonus main .game .game-bonus .spock-bonus:hover, .bonus body main .game .game-bonus .spock-bonus:hover, body .bonus main .game-bonus .game .spock-bonus:hover, .bonus body main .game-bonus .game .spock-bonus:hover {
+    .normal main .game .icons-hover:hover, .normal main .game .paper:hover, .normal main .game .scissors:hover, .normal main .game .rock:hover, .normal .bonus main .game .lizard:hover, .bonus .normal main .game .lizard:hover, .normal .bonus main .game .spock:hover, .bonus .normal main .game .spock:hover {
       cursor: pointer; }
-      body main .game .icons-hover:hover input, body main .game .paper:hover input, body main .game .scissors:hover input, body main .game .rock:hover input, body .bonus main .game .game-bonus .paper-bonus:hover input, .bonus body main .game .game-bonus .paper-bonus:hover input, body .bonus main .game-bonus .game .paper-bonus:hover input, .bonus body main .game-bonus .game .paper-bonus:hover input, body .bonus main .game .game-bonus .scissors-bonus:hover input, .bonus body main .game .game-bonus .scissors-bonus:hover input, body .bonus main .game-bonus .game .scissors-bonus:hover input, .bonus body main .game-bonus .game .scissors-bonus:hover input, body .bonus main .game .game-bonus .rock-bonus:hover input, .bonus body main .game .game-bonus .rock-bonus:hover input, body .bonus main .game-bonus .game .rock-bonus:hover input, .bonus body main .game-bonus .game .rock-bonus:hover input, body .bonus main .game .game-bonus .lizard-bonus:hover input, .bonus body main .game .game-bonus .lizard-bonus:hover input, body .bonus main .game-bonus .game .lizard-bonus:hover input, .bonus body main .game-bonus .game .lizard-bonus:hover input, body .bonus main .game .game-bonus .spock-bonus:hover input, .bonus body main .game .game-bonus .spock-bonus:hover input, body .bonus main .game-bonus .game .spock-bonus:hover input, .bonus body main .game-bonus .game .spock-bonus:hover input {
+      .normal main .game .icons-hover:hover input, .normal main .game .paper:hover input, .normal main .game .scissors:hover input, .normal main .game .rock:hover input, .normal .bonus main .game .lizard:hover input, .bonus .normal main .game .lizard:hover input, .normal .bonus main .game .spock:hover input, .bonus .normal main .game .spock:hover input {
         transform: scale(1.1); }
-    body main .game .paper {
+    .normal main .game .paper {
       grid-area: 1 / 1;
       border-color: #4865f4; }
-    body main .game .scissors {
+    .normal main .game .scissors {
       grid-area: 1 / 3;
       border-color: #ec9e0e; }
-    body main .game .rock {
+    .normal main .game .rock {
       grid-area: 2 / 2;
       border-color: #dc2e4e;
       justify-self: center; }
-      body main .game .rock input {
+      .normal main .game .rock input {
         padding-top: 45px; }
-  body main .vs {
+  .normal main .vs {
     display: none;
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
     text-align: center;
     margin-bottom: 22%; }
-    body main .vs .h3, body main .vs .user h3, body main .vs .cpu h3, body .bonus main .vs .user h3, .bonus body main .vs .user h3, body .bonus main .vs .cpu h3, .bonus body main .vs .cpu h3 {
+    .normal main .vs .h3, .normal main .vs .user h3, .normal main .vs .cpu h3 {
       padding-top: 30px;
       text-transform: uppercase;
       font-size: 0.8em;
       letter-spacing: 2px;
       font-weight: 700; }
-    body main .vs .box, body main .vs .user, body main .vs .cpu, body .bonus main .vs .user, .bonus body main .vs .user, body .bonus main .vs .cpu, .bonus body main .vs .cpu {
+    .normal main .vs .box, .normal main .vs .user, .normal main .vs .cpu {
       width: 100%;
       position: relative;
       color: white;
@@ -140,13 +140,13 @@ body {
       grid-template-columns: repeat(1, 1fr);
       justify-items: center;
       text-align: center; }
-    body main .vs .user .paper {
+    .normal main .vs .user .paper {
       display: none;
       border-color: #4865f4; }
-    body main .vs .user .scissors {
+    .normal main .vs .user .scissors {
       display: none;
       border-color: #ec9e0e; }
-    body main .vs .user .rock {
+    .normal main .vs .user .rock {
       display: none;
       border-color: #dc2e4e;
       padding-top: 5px; }
@@ -156,10 +156,10 @@ body {
     transform: scale(0.5); }
   100% {
     transform: scale(1); } }
-    body main .vs .add-pop, body main .vs .cpu .paper, body main .vs .cpu .scissors, body main .vs .cpu .rock, body .bonus main .vs .cpu .paper, .bonus body main .vs .cpu .paper, body .bonus main .vs .cpu .scissors, .bonus body main .vs .cpu .scissors, body .bonus main .vs .cpu .rock, .bonus body main .vs .cpu .rock, body .bonus main .vs .cpu .lizard, .bonus body main .vs .cpu .lizard, body .bonus main .vs .cpu .spock, .bonus body main .vs .cpu .spock {
+    .normal main .vs .add-pop, .normal main .vs .cpu .paper, .normal main .vs .cpu .scissors, .normal main .vs .cpu .rock, .normal .bonus main .vs .cpu .lizard, .bonus .normal main .vs .cpu .lizard, .normal .bonus main .vs .cpu .spock, .bonus .normal main .vs .cpu .spock {
       animation-name: pop;
       animation-duration: 1s; }
-    body main .vs .cpu .hollow {
+    .normal main .vs .cpu .hollow {
       display: block;
       width: 100px;
       height: 100px;
@@ -167,29 +167,29 @@ body {
       margin-top: 20px;
       margin-bottom: 25px;
       background: #141539; }
-    body main .vs .cpu .paper {
+    .normal main .vs .cpu .paper {
       display: none;
       border-color: #4865f4; }
-    body main .vs .cpu .scissors {
+    .normal main .vs .cpu .scissors {
       display: none;
       border-color: #ec9e0e; }
-    body main .vs .cpu .rock {
+    .normal main .vs .cpu .rock {
       display: none;
       border-color: #dc2e4e;
       padding-top: 5px; }
-  body main .result {
+  .normal main .result {
     display: none;
     width: 55%;
     margin: auto;
     margin-bottom: 15%; }
-    body main .result h3 {
+    .normal main .result h3 {
       color: white;
       text-transform: uppercase;
       text-align: center;
       font-size: 3.2em;
       font-weight: 700;
       margin-bottom: 10%; }
-    body main .result button {
+    .normal main .result button {
       border: 2px solid white;
       border-radius: 10px;
       width: 100%;
@@ -200,13 +200,13 @@ body {
       letter-spacing: 2px;
       text-align: center;
       transition-duration: 0.5s; }
-      body main .result button:hover {
+      .normal main .result button:hover {
         color: white; }
-  body main .rules {
+  .normal main .rules {
     width: 100%;
     text-align: center;
     margin-bottom: 5%; }
-    body main .rules button {
+    .normal main .rules button {
       background: none;
       border: 2px solid white;
       border-radius: 10px;
@@ -218,95 +218,95 @@ body {
       letter-spacing: 2px;
       text-align: center;
       transition-duration: 0.5s; }
-      body main .rules button:hover {
+      .normal main .rules button:hover {
         cursor: pointer;
         background-color: white;
         color: #3b4363;
         transform: scale(1.1); }
-  body main .modal {
+  .normal main .modal {
     background-color: white;
     padding-top: 25%; }
-    body main .modal .inside-modal {
+    .normal main .modal .inside-modal {
       display: grid;
       grid-template-columns: repeat(1, 1fr);
       align-items: center; }
-      body main .modal .inside-modal h2 {
+      .normal main .modal .inside-modal h2 {
         font-size: 2em;
         font-weight: 700;
         text-transform: uppercase;
         margin-bottom: 25%;
         text-align: center; }
-      body main .modal .inside-modal .triangle-rule {
+      .normal main .modal .inside-modal .triangle-rule {
         width: 80%;
         margin: auto;
         margin-bottom: 50%; }
-      body main .modal .inside-modal .close {
+      .normal main .modal .inside-modal .close {
         width: 7%;
         margin: auto; }
 
 @media screen and (min-width: 1366px) {
-  body .top {
+  .normal .top {
     margin-top: 3.5%;
     width: 50%;
     border-radius: 15px;
     padding: 20px;
     margin-bottom: 4%; }
-    body .top img {
+    .normal .top img {
       width: 160px; }
-    body .top .score {
+    .normal .top .score {
       width: 150px;
       height: 110px;
       border-radius: 8px;
       padding: 15px; }
-      body .top .score h3 {
+      .normal .top .score h3 {
         font-size: 1.1em; }
-      body .top .score .points {
+      .normal .top .score .points {
         font-size: 4em; }
-  body main .icons, body main .game .paper, body main .game .scissors, body main .game .rock, body main .vs .user .paper, body main .vs .user .scissors, body main .vs .user .rock, body main .vs .cpu .hollow, body main .vs .cpu .paper, body main .vs .cpu .scissors, body main .vs .cpu .rock, body .bonus main .game-bonus .paper-bonus, .bonus body main .game-bonus .paper-bonus, body .bonus main .game-bonus .scissors-bonus, .bonus body main .game-bonus .scissors-bonus, body .bonus main .game-bonus .rock-bonus, .bonus body main .game-bonus .rock-bonus, body .bonus main .game-bonus .lizard-bonus, .bonus body main .game-bonus .lizard-bonus, body .bonus main .game-bonus .spock-bonus, .bonus body main .game-bonus .spock-bonus {
+  .normal main .icons, .normal main .game .paper, .normal main .game .scissors, .normal main .game .rock, .normal main .vs .user .paper, .normal main .vs .user .scissors, .normal main .vs .user .rock, .normal main .vs .cpu .hollow, .normal main .vs .cpu .paper, .normal main .vs .cpu .scissors, .normal main .vs .cpu .rock, .normal .bonus main .game .lizard, .bonus .normal main .game .lizard, .normal .bonus main .game .spock, .bonus .normal main .game .spock {
     width: 200px;
     height: 200px;
     border-width: 25px; }
-    body main .icons input, body main .game .paper input, body main .game .scissors input, body main .game .rock input, body main .vs .user .paper input, body main .vs .user .scissors input, body main .vs .user .rock input, body main .vs .cpu .hollow input, body main .vs .cpu .paper input, body main .vs .cpu .scissors input, body main .vs .cpu .rock input, body .bonus main .game-bonus .paper-bonus input, .bonus body main .game-bonus .paper-bonus input, body .bonus main .game-bonus .scissors-bonus input, .bonus body main .game-bonus .scissors-bonus input, body .bonus main .game-bonus .rock-bonus input, .bonus body main .game-bonus .rock-bonus input, body .bonus main .game-bonus .lizard-bonus input, .bonus body main .game-bonus .lizard-bonus input, body .bonus main .game-bonus .spock-bonus input, .bonus body main .game-bonus .spock-bonus input {
+    .normal main .icons input, .normal main .game .paper input, .normal main .game .scissors input, .normal main .game .rock input, .normal main .vs .user .paper input, .normal main .vs .user .scissors input, .normal main .vs .user .rock input, .normal main .vs .cpu .hollow input, .normal main .vs .cpu .paper input, .normal main .vs .cpu .scissors input, .normal main .vs .cpu .rock input, .normal .bonus main .game .lizard input, .bonus .normal main .game .lizard input, .normal .bonus main .game .spock input, .bonus .normal main .game .spock input {
       height: 190px;
       padding: 55px; }
-  body main .game {
+  .normal main .game {
     width: 560px;
     background-size: 50%;
     margin-bottom: 1%; }
-    body main .game .rock input {
+    .normal main .game .rock input {
       padding-top: 60px;
       width: 180px;
       height: 180px; }
-  body main .vs {
+  .normal main .vs {
     width: 50%;
     margin: auto; }
-    body main .vs .subtitle, body main .vs .user h3, body main .vs .cpu h3 {
+    .normal main .vs .subtitle, .normal main .vs .user h3, .normal main .vs .cpu h3 {
       grid-area: 1 / 1;
       font-size: 1.5em;
       margin-bottom: 50px; }
-    body main .vs .deskicons, body main .vs .user .paper, body main .vs .user .scissors, body main .vs .user .rock, body main .vs .cpu .paper, body main .vs .cpu .scissors, body main .vs .cpu .rock {
+    .normal main .vs .deskicons, .normal main .vs .user .paper, .normal main .vs .user .scissors, .normal main .vs .user .rock, .normal main .vs .cpu .paper, .normal main .vs .cpu .scissors, .normal main .vs .cpu .rock, .normal .bonus main .vs .user .lizard, .bonus .normal main .vs .user .lizard, .normal .bonus main .vs .user .spock, .bonus .normal main .vs .user .spock, .normal .bonus main .vs .cpu .lizard, .bonus .normal main .vs .cpu .lizard, .normal .bonus main .vs .cpu .spock, .bonus .normal main .vs .cpu .spock {
       width: 270px;
       height: 270px; }
-      body main .vs .deskicons img, body main .vs .user .paper img, body main .vs .user .scissors img, body main .vs .user .rock img, body main .vs .cpu .paper img, body main .vs .cpu .scissors img, body main .vs .cpu .rock img {
+      .normal main .vs .deskicons img, .normal main .vs .user .paper img, .normal main .vs .user .scissors img, .normal main .vs .user .rock img, .normal main .vs .cpu .paper img, .normal main .vs .cpu .scissors img, .normal main .vs .cpu .rock img, .normal .bonus main .vs .user .lizard img, .bonus .normal main .vs .user .lizard img, .normal .bonus main .vs .user .spock img, .bonus .normal main .vs .user .spock img, .normal .bonus main .vs .cpu .lizard img, .bonus .normal main .vs .cpu .lizard img, .normal .bonus main .vs .cpu .spock img, .bonus .normal main .vs .cpu .spock img {
         margin-top: 30px;
         height: 130px; }
-    body main .vs .cpu .hollow {
+    .normal main .vs .cpu .hollow {
       width: 210px;
       height: 210px; }
-  body main .result {
+  .normal main .result {
     width: 15%;
     margin-bottom: 0; }
-  body main .rules {
+  .normal main .rules {
     width: 10%;
     text-align: right;
     margin-left: auto;
     margin-right: 2%;
     margin-bottom: 1%; }
-    body main .rules button {
+    .normal main .rules button {
       width: 140px; }
-  body main .modal {
+  .normal main .modal {
     padding-top: 0; }
-    body main .modal .inside-modal .triangle-rule {
+    .normal main .modal .inside-modal .triangle-rule {
       margin-bottom: 20%; } }
 
 .bonus {
@@ -342,7 +342,7 @@ body {
       .bonus .top .score .points {
         font-size: 2.5em;
         font-weight: 700; }
-  .bonus main .icons, .bonus body main .game .paper, body .bonus main .game .paper, .bonus body main .game .scissors, body .bonus main .game .scissors, .bonus body main .game .rock, body .bonus main .game .rock, .bonus body main .vs .user .paper, body .bonus main .vs .user .paper, .bonus body main .vs .user .scissors, body .bonus main .vs .user .scissors, .bonus body main .vs .user .rock, body .bonus main .vs .user .rock, .bonus body main .vs .cpu .hollow, body .bonus main .vs .cpu .hollow, .bonus body main .vs .cpu .paper, body .bonus main .vs .cpu .paper, .bonus body main .vs .cpu .scissors, body .bonus main .vs .cpu .scissors, .bonus body main .vs .cpu .rock, body .bonus main .vs .cpu .rock, .bonus main .game-bonus .paper-bonus, .bonus main .game-bonus .scissors-bonus, .bonus main .game-bonus .rock-bonus, .bonus main .game-bonus .lizard-bonus, .bonus main .game-bonus .spock-bonus {
+  .bonus main .icons, .bonus .normal main .vs .user .paper, .normal .bonus main .vs .user .paper, .bonus .normal main .vs .user .scissors, .normal .bonus main .vs .user .scissors, .bonus .normal main .vs .user .rock, .normal .bonus main .vs .user .rock, .bonus .normal main .vs .cpu .hollow, .normal .bonus main .vs .cpu .hollow, .bonus .normal main .vs .cpu .paper, .normal .bonus main .vs .cpu .paper, .bonus .normal main .vs .cpu .scissors, .normal .bonus main .vs .cpu .scissors, .bonus .normal main .vs .cpu .rock, .normal .bonus main .vs .cpu .rock, .bonus main .game .paper, .bonus main .game .scissors, .bonus main .game .rock, .bonus main .game .lizard, .bonus main .game .spock {
     background-color: white;
     width: 90px;
     height: 90px;
@@ -352,12 +352,12 @@ body {
     border-width: 10px;
     border-style: solid;
     position: absolute; }
-    .bonus main .icons input, .bonus body main .game .paper input, body .bonus main .game .paper input, .bonus body main .game .scissors input, body .bonus main .game .scissors input, .bonus body main .game .rock input, body .bonus main .game .rock input, .bonus body main .vs .user .paper input, body .bonus main .vs .user .paper input, .bonus body main .vs .user .scissors input, body .bonus main .vs .user .scissors input, .bonus body main .vs .user .rock input, body .bonus main .vs .user .rock input, .bonus body main .vs .cpu .hollow input, body .bonus main .vs .cpu .hollow input, .bonus body main .vs .cpu .paper input, body .bonus main .vs .cpu .paper input, .bonus body main .vs .cpu .scissors input, body .bonus main .vs .cpu .scissors input, .bonus body main .vs .cpu .rock input, body .bonus main .vs .cpu .rock input, .bonus main .game-bonus .paper-bonus input, .bonus main .game-bonus .scissors-bonus input, .bonus main .game-bonus .rock-bonus input, .bonus main .game-bonus .lizard-bonus input, .bonus main .game-bonus .spock-bonus input {
+    .bonus main .icons input, .bonus .normal main .vs .user .paper input, .normal .bonus main .vs .user .paper input, .bonus .normal main .vs .user .scissors input, .normal .bonus main .vs .user .scissors input, .bonus .normal main .vs .user .rock input, .normal .bonus main .vs .user .rock input, .bonus .normal main .vs .cpu .hollow input, .normal .bonus main .vs .cpu .hollow input, .bonus .normal main .vs .cpu .paper input, .normal .bonus main .vs .cpu .paper input, .bonus .normal main .vs .cpu .scissors input, .normal .bonus main .vs .cpu .scissors input, .bonus .normal main .vs .cpu .rock input, .normal .bonus main .vs .cpu .rock input, .bonus main .game .paper input, .bonus main .game .scissors input, .bonus main .game .rock input, .bonus main .game .lizard input, .bonus main .game .spock input {
       position: absolute;
       transform: scale(0.7);
       top: 10px;
       left: 10px; }
-    .bonus main .icons img, .bonus body main .game .paper img, body .bonus main .game .paper img, .bonus body main .game .scissors img, body .bonus main .game .scissors img, .bonus body main .game .rock img, body .bonus main .game .rock img, .bonus body main .vs .user .paper img, body .bonus main .vs .user .paper img, .bonus body main .vs .user .scissors img, body .bonus main .vs .user .scissors img, .bonus body main .vs .user .rock img, body .bonus main .vs .user .rock img, .bonus body main .vs .cpu .hollow img, body .bonus main .vs .cpu .hollow img, .bonus body main .vs .cpu .paper img, body .bonus main .vs .cpu .paper img, .bonus body main .vs .cpu .scissors img, body .bonus main .vs .cpu .scissors img, .bonus body main .vs .cpu .rock img, body .bonus main .vs .cpu .rock img, .bonus main .game-bonus .paper-bonus img, .bonus main .game-bonus .scissors-bonus img, .bonus main .game-bonus .rock-bonus img, .bonus main .game-bonus .lizard-bonus img, .bonus main .game-bonus .spock-bonus img {
+    .bonus main .icons img, .bonus .normal main .vs .user .paper img, .normal .bonus main .vs .user .paper img, .bonus .normal main .vs .user .scissors img, .normal .bonus main .vs .user .scissors img, .bonus .normal main .vs .user .rock img, .normal .bonus main .vs .user .rock img, .bonus .normal main .vs .cpu .hollow img, .normal .bonus main .vs .cpu .hollow img, .bonus .normal main .vs .cpu .paper img, .normal .bonus main .vs .cpu .paper img, .bonus .normal main .vs .cpu .scissors img, .normal .bonus main .vs .cpu .scissors img, .bonus .normal main .vs .cpu .rock img, .normal .bonus main .vs .cpu .rock img, .bonus main .game .paper img, .bonus main .game .scissors img, .bonus main .game .rock img, .bonus main .game .lizard img, .bonus main .game .spock img {
       padding-top: 20px; }
   .bonus main .og-icons, .bonus main .vs .user .paper, .bonus main .vs .user .scissors, .bonus main .vs .user .rock, .bonus main .vs .user .lizard, .bonus main .vs .user .spock, .bonus main .vs .cpu .hollow, .bonus main .vs .cpu .paper, .bonus main .vs .cpu .scissors, .bonus main .vs .cpu .rock, .bonus main .vs .cpu .lizard, .bonus main .vs .cpu .spock {
     background-color: white;
@@ -374,7 +374,7 @@ body {
       margin-left: -15px; }
     .bonus main .og-icons img, .bonus main .vs .user .paper img, .bonus main .vs .user .scissors img, .bonus main .vs .user .rock img, .bonus main .vs .user .lizard img, .bonus main .vs .user .spock img, .bonus main .vs .cpu .hollow img, .bonus main .vs .cpu .paper img, .bonus main .vs .cpu .scissors img, .bonus main .vs .cpu .rock img, .bonus main .vs .cpu .lizard img, .bonus main .vs .cpu .spock img {
       padding-top: 20px; }
-  .bonus main .game-bonus {
+  .bonus main .game {
     background-image: url("../../assets/images/bg-pentagon.svg");
     background-size: 60%;
     background-repeat: no-repeat;
@@ -384,35 +384,35 @@ body {
     margin: auto;
     margin-bottom: 25%;
     position: relative; }
-    .bonus main .game-bonus .icons-hover:hover, .bonus body main .game-bonus .game .paper:hover, body .bonus main .game-bonus .game .paper:hover, .bonus body main .game .game-bonus .paper:hover, body .bonus main .game .game-bonus .paper:hover, .bonus body main .game-bonus .game .scissors:hover, body .bonus main .game-bonus .game .scissors:hover, .bonus body main .game .game-bonus .scissors:hover, body .bonus main .game .game-bonus .scissors:hover, .bonus body main .game-bonus .game .rock:hover, body .bonus main .game-bonus .game .rock:hover, .bonus body main .game .game-bonus .rock:hover, body .bonus main .game .game-bonus .rock:hover, .bonus main .game-bonus .paper-bonus:hover, .bonus main .game-bonus .scissors-bonus:hover, .bonus main .game-bonus .rock-bonus:hover, .bonus main .game-bonus .lizard-bonus:hover, .bonus main .game-bonus .spock-bonus:hover {
+    .bonus main .game .icons-hover:hover, .bonus main .game .paper:hover, .bonus main .game .scissors:hover, .bonus main .game .rock:hover, .bonus main .game .lizard:hover, .bonus main .game .spock:hover {
       cursor: pointer; }
-      .bonus main .game-bonus .icons-hover:hover input, .bonus body main .game-bonus .game .paper:hover input, body .bonus main .game-bonus .game .paper:hover input, .bonus body main .game .game-bonus .paper:hover input, body .bonus main .game .game-bonus .paper:hover input, .bonus body main .game-bonus .game .scissors:hover input, body .bonus main .game-bonus .game .scissors:hover input, .bonus body main .game .game-bonus .scissors:hover input, body .bonus main .game .game-bonus .scissors:hover input, .bonus body main .game-bonus .game .rock:hover input, body .bonus main .game-bonus .game .rock:hover input, .bonus body main .game .game-bonus .rock:hover input, body .bonus main .game .game-bonus .rock:hover input, .bonus main .game-bonus .paper-bonus:hover input, .bonus main .game-bonus .scissors-bonus:hover input, .bonus main .game-bonus .rock-bonus:hover input, .bonus main .game-bonus .lizard-bonus:hover input, .bonus main .game-bonus .spock-bonus:hover input {
+      .bonus main .game .icons-hover:hover input, .bonus main .game .paper:hover input, .bonus main .game .scissors:hover input, .bonus main .game .rock:hover input, .bonus main .game .lizard:hover input, .bonus main .game .spock:hover input {
         transform: scale(0.8); }
-    .bonus main .game-bonus .paper-bonus {
+    .bonus main .game .paper {
       border-color: #4865f4;
       top: 90px;
       left: 200px; }
-    .bonus main .game-bonus .scissors-bonus {
+    .bonus main .game .scissors {
       border-color: #ec9e0e;
       top: 20px;
       left: 115px; }
-    .bonus main .game-bonus .rock-bonus {
+    .bonus main .game .rock {
       border-color: #dc2e4e;
       top: 200px;
       left: 180px; }
-      .bonus main .game-bonus .rock-bonus input {
+      .bonus main .game .rock input {
         top: 15px; }
-    .bonus main .game-bonus .lizard-bonus {
+    .bonus main .game .lizard {
       border-color: #834fe3;
       top: 200px;
       left: 50px; }
-      .bonus main .game-bonus .lizard-bonus input {
+      .bonus main .game .lizard input {
         left: 4px; }
-    .bonus main .game-bonus .spock-bonus {
+    .bonus main .game .spock {
       border-color: #40b9ce;
       top: 90px;
       left: 30px; }
-      .bonus main .game-bonus .spock-bonus input {
+      .bonus main .game .spock input {
         left: 15px; }
   .bonus main .vs {
     display: none;
@@ -549,5 +549,96 @@ body {
       .bonus main .modal .inside-modal .close {
         width: 7%;
         margin: auto; }
+
+@media screen and (min-width: 1366px) {
+  .bonus .top {
+    margin-top: 3.5%;
+    width: 50%;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 1%; }
+    .bonus .top img {
+      width: 120px; }
+    .bonus .top .score {
+      width: 150px;
+      height: 110px;
+      border-radius: 8px;
+      padding: 15px; }
+      .bonus .top .score h3 {
+        font-size: 1.1em; }
+      .bonus .top .score .points {
+        font-size: 4em; }
+  .bonus main .og-icons, .bonus main .vs .user .paper, .bonus main .vs .user .scissors, .bonus main .vs .user .rock, .bonus main .vs .user .lizard, .bonus main .vs .user .spock, .bonus main .vs .cpu .hollow, .bonus main .vs .cpu .paper, .bonus main .vs .cpu .scissors, .bonus main .vs .cpu .rock, .bonus main .vs .cpu .lizard, .bonus main .vs .cpu .spock {
+    width: 200px;
+    height: 200px;
+    border-width: 25px; }
+  .bonus main .icons, .bonus .normal main .vs .user .paper, .normal .bonus main .vs .user .paper, .bonus .normal main .vs .user .scissors, .normal .bonus main .vs .user .scissors, .bonus .normal main .vs .user .rock, .normal .bonus main .vs .user .rock, .bonus .normal main .vs .cpu .hollow, .normal .bonus main .vs .cpu .hollow, .bonus .normal main .vs .cpu .paper, .normal .bonus main .vs .cpu .paper, .bonus .normal main .vs .cpu .scissors, .normal .bonus main .vs .cpu .scissors, .bonus .normal main .vs .cpu .rock, .normal .bonus main .vs .cpu .rock, .bonus main .game .paper, .bonus main .game .scissors, .bonus main .game .rock, .bonus main .game .lizard, .bonus main .game .spock {
+    width: 140px;
+    height: 140px;
+    border-width: 17px; }
+    .bonus main .icons input, .bonus .normal main .vs .user .paper input, .normal .bonus main .vs .user .paper input, .bonus .normal main .vs .user .scissors input, .normal .bonus main .vs .user .scissors input, .bonus .normal main .vs .user .rock input, .normal .bonus main .vs .user .rock input, .bonus .normal main .vs .cpu .hollow input, .normal .bonus main .vs .cpu .hollow input, .bonus .normal main .vs .cpu .paper input, .normal .bonus main .vs .cpu .paper input, .bonus .normal main .vs .cpu .scissors input, .normal .bonus main .vs .cpu .scissors input, .bonus .normal main .vs .cpu .rock input, .normal .bonus main .vs .cpu .rock input, .bonus main .game .paper input, .bonus main .game .scissors input, .bonus main .game .rock input, .bonus main .game .lizard input, .bonus main .game .spock input {
+      transform: scale(1);
+      padding: 40px;
+      margin-left: -20px;
+      margin-top: -25px; }
+  .bonus main .game {
+    width: 560px;
+    height: 560px;
+    background-size: 65%;
+    margin-bottom: 1%; }
+    .bonus main .game .icons-hover:hover input, .bonus main .game .paper:hover input, .bonus main .game .scissors:hover input, .bonus main .game .rock:hover input, .bonus main .game .lizard:hover input, .bonus main .game .spock:hover input {
+      transform: scale(1.2); }
+    .bonus main .game .paper {
+      top: 150px;
+      left: 350px; }
+    .bonus main .game .scissors {
+      top: 30px;
+      left: 190px; }
+    .bonus main .game .rock {
+      top: 370px;
+      left: 310px; }
+      .bonus main .game .rock input {
+        top: 15px; }
+    .bonus main .game .lizard {
+      top: 370px;
+      left: 90px; }
+      .bonus main .game .lizard input {
+        left: 4px; }
+    .bonus main .game .spock {
+      top: 150px;
+      left: 30px; }
+      .bonus main .game .spock input {
+        left: 15px; }
+  .bonus main .vs {
+    width: 50%;
+    margin: auto; }
+    .bonus main .vs .subtitle, .bonus main .vs .user h3, .bonus main .vs .cpu h3 {
+      grid-area: 1 / 1;
+      font-size: 1.5em;
+      margin-bottom: 50px; }
+    .bonus main .vs .deskicons, .bonus main .vs .user .paper, .bonus main .vs .user .scissors, .bonus main .vs .user .rock, .bonus main .vs .user .lizard, .bonus main .vs .user .spock, .bonus main .vs .cpu .paper, .bonus main .vs .cpu .scissors, .bonus main .vs .cpu .rock, .bonus main .vs .cpu .lizard, .bonus main .vs .cpu .spock {
+      width: 270px;
+      height: 270px; }
+      .bonus main .vs .deskicons img, .bonus main .vs .user .paper img, .bonus main .vs .user .scissors img, .bonus main .vs .user .rock img, .bonus main .vs .user .lizard img, .bonus main .vs .user .spock img, .bonus main .vs .cpu .paper img, .bonus main .vs .cpu .scissors img, .bonus main .vs .cpu .rock img, .bonus main .vs .cpu .lizard img, .bonus main .vs .cpu .spock img {
+        margin-top: 30px;
+        height: 130px; }
+    .bonus main .vs .cpu .hollow {
+      width: 210px;
+      height: 210px; }
+  .bonus main .result {
+    width: 15%;
+    margin-bottom: 0; }
+  .bonus main .rules {
+    width: 10%;
+    text-align: right;
+    margin-left: auto;
+    margin-right: 2%;
+    margin-bottom: 1%; }
+    .bonus main .rules button {
+      width: 140px; }
+  .bonus main .modal {
+    padding-top: 0; }
+    .bonus main .modal .inside-modal .triangle-rule {
+      margin-bottom: 20%; } }
 
 /*# sourceMappingURL=style.css.map */

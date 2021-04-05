@@ -92,7 +92,7 @@
             }
         }
 
-        .game-bonus {
+        .game {
             background-image: url('../../assets/images/bg-pentagon.svg');
             background-size: 60%;
             background-repeat: no-repeat;
@@ -114,21 +114,21 @@
                 }
             }
 
-            .paper-bonus {
+            .paper {
                 @extend .icons, .icons-hover;
                 border-color: $paper;
                 top: 90px;
                 left: 200px;
             }
 
-            .scissors-bonus {
+            .scissors {
                 @extend .icons, .icons-hover;
                 border-color: $scissors;
                 top: 20px;
                 left: 115px;
             }
 
-            .rock-bonus {
+            .rock {
                 @extend .icons, .icons-hover;
                 border-color: $rock;
                 top: 200px;
@@ -139,7 +139,7 @@
                 }
             }
 
-            .lizard-bonus {
+            .lizard {
                 @extend .icons, .icons-hover;
                 border-color: $lizard;
                 top: 200px;
@@ -150,7 +150,7 @@
                 }
             }
 
-            .spock-bonus {
+            .spock {
                 @extend .icons, .icons-hover;
                 border-color: $cyan;
                 top: 90px;

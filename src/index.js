@@ -80,26 +80,26 @@ buttons.forEach((button) => {
 
             case "paper":
                 userPaper.style.display = 'block'
-                timeout = setTimeout(getComputerChoice, 1000)
+                timeout = setTimeout(getComputerChoice, 1500)
                 timeout = setTimeout(() => {
                     getResult(userChoice)
-                }, 2000)
+                }, 2500)
                 break
 
             case "scissors":
                 userScissors.style.display = 'block'
-                timeout = setTimeout(getComputerChoice, 1000)
+                timeout = setTimeout(getComputerChoice, 1500)
                 timeout = setTimeout(() => {
                     getResult(userChoice)
-                }, 2000)
+                }, 2500)
                 break
 
             case "rock":
                 userRock.style.display = 'block'
-                timeout = setTimeout(getComputerChoice, 1000)
+                timeout = setTimeout(getComputerChoice, 1500)
                 timeout = setTimeout(() => {
                     getResult(userChoice)
-                }, 2000)
+                }, 2500)
                 break
 
             default:

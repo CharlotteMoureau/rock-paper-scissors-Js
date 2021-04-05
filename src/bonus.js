@@ -12,7 +12,7 @@ let cpuAnswer = []
 const computerPossibleChoice = ["paper", "scissors", "rock", "lizard", "spock"]
 
 // board game
-const gameBoard = document.getElementById('game-bonus')
+const gameBoard = document.getElementById('game')
 const vsBoard = document.getElementById('vs')
 
 // icons of the user displayed after he has clicked

@@ -1,14 +1,14 @@
 @media screen and (min-width: 1366px) {
-    .normal {
+    .bonus {
         .top {
             margin-top: 3.5%;
             width: 50%;
             border-radius: 15px;
             padding: 20px;
-            margin-bottom: 4%;
+            margin-bottom: 1%;
 
             img {
-                width: 160px;
+                width: 120px;
             }
 
             .score {
@@ -28,27 +28,74 @@
         }
 
         main {
-            .icons {
+            .og-icons {
                 width: 200px;
                 height: 200px;
                 border-width: 25px;
+            }
+            
+            .icons {
+                width: 140px;
+                height: 140px;
+                border-width: 17px;
 
                 input {
-                    height: 190px;
-                    padding: 55px;
+                    transform: scale(1);
+                    padding: 40px;
+                    margin-left: -20px;
+                    margin-top: -25px;
                 }
             }
 
             .game {
                 width: 560px;
-                background-size: 50%;
+                height: 560px;
+                background-size: 65%;
                 margin-bottom: 1%;
 
+                .icons-hover {
+                    &:hover {
+                        input {
+                            transform: scale(1.2);
+                        }
+                    }
+                }
+
+                .paper {
+                    top: 150px;
+                    left: 350px;
+                }
+    
+                .scissors {
+                     
+                    top: 30px;
+                    left: 190px;
+                }
+    
                 .rock {
+                    top: 370px;
+                    left: 310px;
+    
                     input {
-                        padding-top: 60px;
-                        width: 180px;
-                        height: 180px;
+                        top: 15px;
+                    }
+                }
+    
+                .lizard {
+                    top: 370px;
+                    left: 90px;
+    
+                    input {
+                        left: 4px;
+                    }
+                }
+    
+                .spock {
+                    top: 150px;
+                    left: 30px;
+    
+                    input {
+                        left: 15px;
                     }
                 }
             }
@@ -89,6 +136,14 @@
                     .rock {
                         @extend .deskicons;
                     }
+
+                    .lizard {
+                        @extend .deskicons;
+                    }
+
+                    .spock {
+                        @extend .deskicons;
+                    }
                 }
 
                 .cpu {
@@ -110,6 +165,14 @@
                     }
 
                     .rock {
+                        @extend .deskicons;
+                    }
+
+                    .lizard {
+                        @extend .deskicons;
+                    }
+
+                    .spock {
                         @extend .deskicons;
                     }
                 }
